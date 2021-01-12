@@ -2,7 +2,7 @@ import React from "react"
 import Image from "../components/image"
 import { Link } from "gatsby"
 
-export default function Product({ data }) {
+export default function Product({ data, addItem }) {
   const product = data.data
   return (
     <div style={product_style}>
@@ -10,7 +10,7 @@ export default function Product({ data }) {
             <h2>{product.title[0].text}</h2>
             <p>pris: {product.price} kr</p>
             <p>{product.paragraph[0].text}</p>
-            <Link to={"#"}><p>Lägg till</p></Link>
+            <p onClick={() => addItem(product)} style={{color: "blue", cursor: "pointer"}}>Lägg till</p>
         </div>
         <div style={image_style}>
             <Image />

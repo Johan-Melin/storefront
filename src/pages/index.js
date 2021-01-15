@@ -5,7 +5,6 @@ import Product from "../templates/product"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-
 /*let shoppingCart = [
   {
     "name": "Product 2",

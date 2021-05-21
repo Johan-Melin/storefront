@@ -4,6 +4,17 @@ import Product from "../templates/product"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+//import axios from 'axios';
+//import { Router } from "express"
+
+/*Router.get('/', function(req, res, next) {
+  axios.get('').then(response => {
+    //https://cors-anywhere.herokuapp.com
+    res.send(response.data.result);
+  }).catch(error => {
+    res.send(error.message)
+  })
+});*/
 
 /*let shoppingCart = [
   {
@@ -32,10 +43,10 @@ function IndexPage({ data }) {
         "unit_price": product.price,
       }
       shoppingCart.push(newItem);
-      setShoppingCart(shoppingCart);
     }else{
       found.quantity++;
     }
+    setShoppingCart(shoppingCart);
     setOrderAmount(orderAmount+product.price);
   }
 

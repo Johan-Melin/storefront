@@ -23,6 +23,17 @@ const Image = () => {
           }
         }
       }
+      allPrismicProduct {
+        edges {
+          node {
+            data {
+              image {
+                url
+              }
+            }
+          }
+        }
+      }
     }
   `)
 
